@@ -1,9 +1,7 @@
-﻿using DocumentNumber.PaymentCardNumber.Generator.Common.Generators;
-using System;
-using System.Text;
-
-namespace DocumentNumber.PaymentCardNumber.Maestro.Generator
+﻿namespace DocumentNumber.PaymentCardNumber.Maestro.Generator
 {
+  using DocumentNumber.PaymentCardNumber.Generator.Common.Generators;
+
   public class MaestroPaymentCardGenerator : CreditCardGeneratorBase
   {
     public MaestroPaymentCardGenerator()

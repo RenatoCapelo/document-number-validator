@@ -4,6 +4,6 @@ namespace DocumentNumber.PaymentCardNumber.Common.Issuer
 {
   public interface IIssuerIdentification
   {
-    public PaymentCardIssuer SupportedPaymentCardIssuer(string paymentCardNumber);
+    PaymentCardIssuer SupportedPaymentCardIssuer(string paymentCardNumber);
   }
 }

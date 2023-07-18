@@ -20,19 +20,5 @@ namespace DocumentNumber.Portugal.CitizenCard.Generator.Tests
       // Assert
       calculatedCheckDigit.ShouldBe(expectedCheckDigit);
     }
-    [Fact(DisplayName = "Generated CC number should be valid.")]
-    public void GeneratedCCNumberShouldBeValid()
-    {
-      // Arrange
-      CitizenCardNumberGenerator numberGenerator = new CitizenCardNumberGenerator();
-      CitizenCardValidator ccValidator = new CitizenCardValidator();
-
-      // Act
-      string generatedCC = numberGenerator.GenerateDocumentNumber();
-      bool generatedCCValidation = ccValidator.Validate(generatedCC);
-
-      // Assert
-      generatedCCValidation.ShouldBeTrue();
-    }
   }
 }

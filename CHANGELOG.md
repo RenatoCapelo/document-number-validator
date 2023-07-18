@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [1.6.0] - 2023-07-18
+### Changed
+- Project are references instead of nuget references.
+- Update libraries to the latest version.
+- Target Framework to netstandard 2.0.
+- Test targeting net6.0, net7.0, net462, net472, net48, net481
+- 
 
 ## [1.5.0] - 2022-07-08
 ### Added

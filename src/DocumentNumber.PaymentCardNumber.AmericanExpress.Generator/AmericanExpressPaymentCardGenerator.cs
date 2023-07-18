@@ -1,7 +1,6 @@
 ﻿namespace DocumentNumber.PaymentCardNumber.AmericanExpress.Generator
 {
   using DocumentNumber.PaymentCardNumber.Generator.Common.Generators;
-  using System;
 
   public class AmericanExpressPaymentCardGenerator : CreditCardGeneratorBase
   {
