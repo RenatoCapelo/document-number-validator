@@ -27,7 +27,13 @@ jobs:
         run: dotnet test  --verbosity normal  Document.Validator.sln --no-restore
       - name: Cleaning distribuition folder.
         run: Remove-Item -LiteralPath "dist/*.nupkg" -Force -Recurse
+  packing:
+    needs: build_and_test
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Cleaning distribuition folder.
+        run: rm -rf "dist/*.nupkg"
       # Packing the Libraries
       - name: Pack DocumentNumber.PaymentCardNumber.Generator.Common
         run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Generator.Common/DocumentNumber.PaymentCardNumber.Generator.Common.csproj
@@ -87,7 +93,7 @@ jobs:
           path: './dist'
 
   publish_nuget_org:
-    needs: build_and_test
+    needs: packing
     runs-on: ubuntu-latest
     environment:
       name: NUGET_ORG
