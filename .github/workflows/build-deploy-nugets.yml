@@ -22,65 +22,65 @@ jobs:
       - name: Restore packages.
         run: dotnet restore Document.Validator.sln
       - name: Build Solution
-        run: dotnet build --configuration $CONFIGURATION Document.Validator.sln
+        run: dotnet build Document.Validator.sln
       - name: Run unit tests.
-        run: dotnet test --configuration $CONFIGURATION  --verbosity normal  Document.Validator.sln
+        run: dotnet test  --verbosity normal  Document.Validator.sln
       - name: Cleaning distribuition folder.
         run: rm -rf dist/*.nupkg
 
       # Packing the Libraries
       - name: Pack DocumentNumber.PaymentCardNumber.Generator.Common
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Generator.Common/DocumentNumber.PaymentCardNumber.Generator.Common.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Generator.Common/DocumentNumber.PaymentCardNumber.Generator.Common.csproj
       - name: Pack DocumentNumber.ValidatorAbstractions
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.ValidatorAbstractions/DocumentNumber.ValidatorAbstractions.csproj
+        run: dotnet pack --no-build  --output ./dist/ ./src/DocumentNumber.ValidatorAbstractions/DocumentNumber.ValidatorAbstractions.csproj
       - name: Pack DocumentNumber.Portugal.BankAccountNumber.Generator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.Portugal.BankAccountNumber.Generator/DocumentNumber.Portugal.BankAccountNumber.Generator.csproj
+        run: dotnet pack --no-build  --output ./dist/ ./src/DocumentNumber.Portugal.BankAccountNumber.Generator/DocumentNumber.Portugal.BankAccountNumber.Generator.csproj
       - name: Pack DocumentNumber.Portugal.CitizenCard.Generator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.Portugal.CitizenCard.Generator/DocumentNumber.Portugal.CitizenCard.Generator.csproj
+        run: dotnet pack --no-build  --output ./dist/ ./src/DocumentNumber.Portugal.CitizenCard.Generator/DocumentNumber.Portugal.CitizenCard.Generator.csproj
       - name: Pack DocumentNumber.Portugal.Nif.Generator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.Portugal.Nif.Generator/DocumentNumber.Portugal.Nif.Generator.csproj
+        run: dotnet pack --no-build  --output ./dist/ ./src/DocumentNumber.Portugal.Nif.Generator/DocumentNumber.Portugal.Nif.Generator.csproj
       - name: Pack DocumentNumber.Portugal.Niss.Generator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.Portugal.Niss.Generator/DocumentNumber.Portugal.Niss.Generator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.Portugal.Niss.Generator/DocumentNumber.Portugal.Niss.Generator.csproj
 
       # Packing the Libaries  
       - name: Pack DocumentNumber.PaymentCardNumber.AmericanExpress.Generator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.AmericanExpress.Generator/DocumentNumber.PaymentCardNumber.AmericanExpress.Generator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.AmericanExpress.Generator/DocumentNumber.PaymentCardNumber.AmericanExpress.Generator.csproj
       - name: Pack DocumentNumber.PaymentCardNumber.Maestro.Generator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Maestro.Generator/DocumentNumber.PaymentCardNumber.Maestro.Generator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Maestro.Generator/DocumentNumber.PaymentCardNumber.Maestro.Generator.csproj
       - name: Pack DocumentNumber.PaymentCardNumber.MaestroUK.Generator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.MaestroUK.Generator/DocumentNumber.PaymentCardNumber.MaestroUK.Generator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.MaestroUK.Generator/DocumentNumber.PaymentCardNumber.MaestroUK.Generator.csproj
       - name: Pack DocumentNumber.PaymentCardNumber.Mastercard.Generator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Mastercard.Generator/DocumentNumber.PaymentCardNumber.Mastercard.Generator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Mastercard.Generator/DocumentNumber.PaymentCardNumber.Mastercard.Generator.csproj
       - name: Pack DocumentNumber.PaymentCardNumber.VISA.Generator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.VISA.Generator/DocumentNumber.PaymentCardNumber.VISA.Generator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.VISA.Generator/DocumentNumber.PaymentCardNumber.VISA.Generator.csproj
       - name: Pack DocumentNumber.PaymentCardNumber.VISAElectron.Generator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.VISAElectron.Generator/DocumentNumber.PaymentCardNumber.VISAElectron.Generator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.VISAElectron.Generator/DocumentNumber.PaymentCardNumber.VISAElectron.Generator.csproj
       - name: Pack DocumentNumber.InternationalBankAccountNumber.Validator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.InternationalBankAccountNumber.Validator/DocumentNumber.InternationalBankAccountNumber.Validator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.InternationalBankAccountNumber.Validator/DocumentNumber.InternationalBankAccountNumber.Validator.csproj
       - name: Pack DocumentNumber.PaymentCardNumber.Common
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Common/DocumentNumber.PaymentCardNumber.Common.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Common/DocumentNumber.PaymentCardNumber.Common.csproj
       - name: Pack DocumentNumber.Portugal.CitizenCard.Validator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.Portugal.CitizenCard.Validator/DocumentNumber.Portugal.CitizenCard.Validator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.Portugal.CitizenCard.Validator/DocumentNumber.Portugal.CitizenCard.Validator.csproj
       - name: Pack DocumentNumber.Portugal.Nif.Validator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.Portugal.Nif.Validator/DocumentNumber.Portugal.Nif.Validator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.Portugal.Nif.Validator/DocumentNumber.Portugal.Nif.Validator.csproj
       - name: Pack DocumentNumber.Portugal.Niss.Validator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.Portugal.Niss.Validator/DocumentNumber.Portugal.Niss.Validator.csproj      
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.Portugal.Niss.Validator/DocumentNumber.Portugal.Niss.Validator.csproj      
       
       # Packing the Libaries  
       - name: Pack DocumentNumber.PaymentCardNumber.AmericanExpress.Validator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.AmericanExpress.Validator/DocumentNumber.PaymentCardNumber.AmericanExpress.Validator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.AmericanExpress.Validator/DocumentNumber.PaymentCardNumber.AmericanExpress.Validator.csproj
       - name: Pack DocumentNumber.PaymentCardNumber.Maestro.Validator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Maestro.Validator/DocumentNumber.PaymentCardNumber.Maestro.Validator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Maestro.Validator/DocumentNumber.PaymentCardNumber.Maestro.Validator.csproj
       - name: Pack DocumentNumber.PaymentCardNumber.MaestroUK.Validator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.MaestroUK.Validator/DocumentNumber.PaymentCardNumber.MaestroUK.Validator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.MaestroUK.Validator/DocumentNumber.PaymentCardNumber.MaestroUK.Validator.csproj
       - name: Pack DocumentNumber.PaymentCardNumber.Mastercard.Validator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Mastercard.Validator/DocumentNumber.PaymentCardNumber.Mastercard.Validator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Mastercard.Validator/DocumentNumber.PaymentCardNumber.Mastercard.Validator.csproj
       - name: Pack DocumentNumber.PaymentCardNumber.VISA.Validator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.VISA.Validator/DocumentNumber.PaymentCardNumber.VISA.Validator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.VISA.Validator/DocumentNumber.PaymentCardNumber.VISA.Validator.csproj
       - name: Pack DocumentNumber.PaymentCardNumber.VISAElectron.Validator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.VISAElectron.Validator/DocumentNumber.PaymentCardNumber.VISAElectron.Validator.csproj
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.VISAElectron.Validator/DocumentNumber.PaymentCardNumber.VISAElectron.Validator.csproj
       - name: Pack DocumentNumber.Portugal.BankAccountNumber.Validator
-        run: dotnet pack --no-build --configuration $CONFIGURATION  --output ./dist/ ./src/DocumentNumber.Portugal.BankAccountNumber.Validator/DocumentNumber.Portugal.BankAccountNumber.Validator.csproj      
+        run: dotnet pack --no-build --output ./dist/ ./src/DocumentNumber.Portugal.BankAccountNumber.Validator/DocumentNumber.Portugal.BankAccountNumber.Validator.csproj      
       - name: Upload nuget packages
         uses: actions/upload-artifact@v3.1.0
         with:
