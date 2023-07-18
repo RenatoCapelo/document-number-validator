@@ -26,7 +26,7 @@ namespace DocumentNumber.Portugal.CitizenCard.Generator.Tests
       // Arrange
       CitizenCardNumberGenerator numberGenerator = new CitizenCardNumberGenerator();
       CitizenCardValidator ccValidator = new CitizenCardValidator();
-
+      
       // Act
       string generatedCC = numberGenerator.GenerateDocumentNumber();
       bool generatedCCValidation = ccValidator.Validate(generatedCC);

@@ -1,6 +1,5 @@
 using DocumentNumber.PaymentCardNumber.Maestro.Validator;
 using Shouldly;
-using System;
 using Xunit;
 
 namespace DocumentNumber.PaymentCardNumber.Maestro.Generator.Tests

@@ -7,6 +7,6 @@
     /// </summary>
     /// <param name="value">Value to be validated.</param>
     /// <returns>True, if value verify the algorithm. False, otherwise.</returns>
-    public bool Validate(string value);
+    bool Validate(string value);
   }
 }

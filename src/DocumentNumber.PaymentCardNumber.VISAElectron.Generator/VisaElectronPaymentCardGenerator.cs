@@ -1,7 +1,7 @@
-﻿using DocumentNumber.PaymentCardNumber.Generator.Common.Generators;
-
-namespace DocumentNumber.PaymentCardNumber.VISAElectron.Generator
+﻿namespace DocumentNumber.PaymentCardNumber.VISAElectron.Generator
 {
+  using DocumentNumber.PaymentCardNumber.Generator.Common.Generators;
+
   public class VisaElectronPaymentCardGenerator : CreditCardGeneratorBase
   {
     public VisaElectronPaymentCardGenerator()
