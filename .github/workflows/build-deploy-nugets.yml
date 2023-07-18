@@ -17,12 +17,14 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 7.x
+      - name: Print variables
+        run: dir "env:"
       - name: Restore packages.
         run: dotnet restore Document.Validator.sln
       - name: Build Solution
-        run: dotnet build Document.Validator.sln --configuration $CONFIGURATION  
+        run: dotnet build --configuration $CONFIGURATION Document.Validator.sln
       - name: Run unit tests.
-        run: dotnet test Document.Validator.sln --configuration $CONFIGURATION  --verbosity normal 
+        run: dotnet test --configuration $CONFIGURATION  --verbosity normal  Document.Validator.sln
       - name: Cleaning distribuition folder.
         run: rm -rf dist/*.nupkg
 
