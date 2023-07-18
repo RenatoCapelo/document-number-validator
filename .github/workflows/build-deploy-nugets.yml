@@ -3,7 +3,7 @@ name: Build And Deploy all Libraries
 on:
   push:    
     branches: 
-      - 'release/dependent/**'
+      - 'release/all/**'
 env:
   CONFIGURATION: 'Release'
 jobs:
