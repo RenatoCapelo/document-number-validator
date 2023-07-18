@@ -17,8 +17,6 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 7.x
-      - name: Print variables
-        run: dir "env:"
       - name: Restore packages.
         run: dotnet restore Document.Validator.sln
       - name: Build Solution
