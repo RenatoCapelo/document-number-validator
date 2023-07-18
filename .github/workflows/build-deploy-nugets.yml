@@ -26,7 +26,7 @@ jobs:
       - name: Run unit tests.
         run: dotnet test  --verbosity normal  Document.Validator.sln --no-restore
       - name: Cleaning distribuition folder.
-        run: rm -rf dist/*.nupkg
+        run: Remove-Item -LiteralPath "dist/*.nupkg" -Force -Recurse
 
       # Packing the Libraries
       - name: Pack DocumentNumber.PaymentCardNumber.Generator.Common
