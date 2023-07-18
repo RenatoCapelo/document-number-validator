@@ -20,9 +20,9 @@ jobs:
       - name: Restore packages.
         run: dotnet restore Document.Validator.sln
       - name: Build Solution
-        run: dotnet build --configuration $CONFIGURATION  Document.Validator.sln
+        run: dotnet build Document.Validator.sln --configuration $CONFIGURATION  
       - name: Run unit tests.
-        run: dotnet test --no-build --configuration $CONFIGURATION  --verbosity normal Document.Validator.sln
+        run: dotnet test Document.Validator.sln --configuration $CONFIGURATION  --verbosity normal 
       - name: Cleaning distribuition folder.
         run: rm -rf dist/*.nupkg
 
