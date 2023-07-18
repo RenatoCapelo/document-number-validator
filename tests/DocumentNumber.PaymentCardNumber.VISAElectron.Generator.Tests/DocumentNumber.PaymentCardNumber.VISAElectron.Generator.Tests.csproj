@@ -1,10 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <IsPackable>false</IsPackable>
-  </PropertyGroup>
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
     <ProjectReference Include="..\..\src\DocumentNumber.PaymentCardNumber.VISAElectron.Generator\DocumentNumber.PaymentCardNumber.VISAElectron.Generator.csproj" />
     <ProjectReference Include="..\..\src\DocumentNumber.PaymentCardNumber.VISAElectron.Validator\DocumentNumber.PaymentCardNumber.VISAElectron.Validator.csproj" />
