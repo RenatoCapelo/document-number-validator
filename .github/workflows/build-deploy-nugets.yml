@@ -1,4 +1,4 @@
-name: Build And Deploy Dependent Libraries
+name: Build And Deploy all Libraries
 
 on:
   push:    
