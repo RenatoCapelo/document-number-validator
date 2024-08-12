@@ -24,7 +24,7 @@
         sum += translatedValue;
       }
       int checkdigit;
-      checkdigit = 10 - (sum % 10);
+      checkdigit = (10 - (sum % 10)) % 10;
 
 
       return checkdigit;
